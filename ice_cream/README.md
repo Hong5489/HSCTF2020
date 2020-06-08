@@ -4,12 +4,12 @@
 > Author: wooshi
 
 Compile the `IceCreamBytes.java` using `javac` command, then run it with `java` command
-```bash
+```sh
 javac IceCreamBytes.java
 java IceCreamBytes
 ```
 Then it prompt me for input the password:
-```bash
+```sh
 java IceCreamBytes
 Enter the password to the ice cream machine: password
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
@@ -50,7 +50,7 @@ public static byte[] fillMachine(byte[] inputIceCream) {
 Looks like our input should be in **length of 34 and with flag format**
 
 Let's test it out:
-```
+```sh
 java IceCreamBytes
 Enter the password to the ice cream machine: flag{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}
 Uhhh that's not right.
@@ -121,7 +121,7 @@ Exchange the index from left to right, right to left
 
 Just `+` to `-`
 ```java
-outputIceCream[i] = (byte)(inputIceCream[i] + toppings[i]);
+outputIceCream[i] = (byte)(inputIceCream[i] - toppings[i]);
 ```
 Then we can edit the `main` function code to print out the flag for us!
 ```java
@@ -136,7 +136,7 @@ public static void main(String[] args) throws IOException {
 I saved it as [Decode.java](Decode.java)
 
 Then compile and run it:
-```bash
+```sh
 javac Decode.java
 java Decode
 ic3_cr34m_byt3s_4r3_4m4z1n9_tr34ts
