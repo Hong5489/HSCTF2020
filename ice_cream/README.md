@@ -9,7 +9,7 @@ javac IceCreamBytes.java
 java IceCreamBytes
 ```
 Then it prompt me for input the password:
-```
+```bash
 java IceCreamBytes
 Enter the password to the ice cream machine: password
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
@@ -95,7 +95,8 @@ But before we reverse it, we also need reverse the function code.
 
 Like plus become minus, minus become plus etc.
 
-1. vanillaShuffle
+1. **vanillaShuffle**
+
 `+` to `-`, and `-` to `+`
 ```java
 if (i % 2 == 0) {
@@ -105,17 +106,19 @@ if (i % 2 == 0) {
 }
 ```
 
-2. chocolateShuffle
+2. **chocolateShuffle**
+
 Exchange the index from left to right, right to left
 
 | Before  | After |
 | ------------- | ------------- |
-| outputIceCream[i] = inputIceCream[i - 2];  | outputIceCream[i - 2] = inputIceCream[i];  |
-|  outputIceCream[i] = inputIceCream[inputIceCream.length - 2];  |  outputIceCream[inputIceCream.length - 2] = inputIceCream[i];  |
-| outputIceCream[i] = inputIceCream[i + 2];| outputIceCream[i + 2] = inputIceCream[i];|
-|outputIceCream[i] = inputIceCream[1];|outputIceCream[1] = inputIceCream[i];|
+| `outputIceCream[i] = inputIceCream[i - 2];`  | `outputIceCream[i - 2] = inputIceCream[i];` |
+|  `outputIceCream[i] = inputIceCream[inputIceCream.length - 2];`  |  `outputIceCream[inputIceCream.length - 2] = inputIceCream[i];`  |
+| `outputIceCream[i] = inputIceCream[i + 2];`| `outputIceCream[i + 2] = inputIceCream[i];`|
+|`outputIceCream[i] = inputIceCream[1];`|`outputIceCream[1] = inputIceCream[i];`|
 
-3. toppings
+3. **toppings**
+
 Just `+` to `-`
 ```java
 outputIceCream[i] = (byte)(inputIceCream[i] + toppings[i]);
@@ -133,7 +136,7 @@ public static void main(String[] args) throws IOException {
 I saved it as [Decode.java](Decode.java)
 
 Then compile and run it:
-```
+```bash
 javac Decode.java
 java Decode
 ic3_cr34m_byt3s_4r3_4m4z1n9_tr34ts
